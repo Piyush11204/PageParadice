@@ -1,0 +1,70 @@
+.Navbar{
+    padding: 10px 20px;
+    height: 45px;
+    width: 100%;
+    background-color: #41acf3;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    
+
+}
+.list{
+    left: 600px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    background-color: #41acf3;
+    
+}
+.listItem{
+    display: flex;
+    position:relative;
+    left: 850px;
+    background-color: #41acf3;
+    
+    margin: 0 10px;
+    font-weight: 500;
+    cursor: pointer;
+    
+}
+
+.avatar{
+    width: 35px;
+    border-radius: 30px;
+    margin-top: 2px;
+    align-items: center;
+    margin-left: 4px;
+
+
+}
+.logo{
+    margin-left: 10PX;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.link{
+    text-decoration: none;
+    color: inherit;
+    background-color: #41acf3;
+    padding: 0px 0px;
+
+}
+.about{
+    display: flex;
+    position:relative;
+    font-size: 18px;
+    padding: 0px 20px;
+    
+    background-color: #41acf3;
+    
+    margin: 0 10px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+

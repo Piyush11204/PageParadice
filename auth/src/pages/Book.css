@@ -1,0 +1,68 @@
+.postimg {
+    display: flex;
+    align-self: center;
+    object-fit: cover;
+    margin: auto;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    height: 400px;
+    width: 270px;
+
+}
+.void{
+    color: aliceblue;
+}
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.line2{
+    width: 100%;
+}
+
+.lists {
+    display: flex;
+    align-items: center;
+    background-color: #3DD1E7;
+    border: 0 solid #E5E7EB;
+    box-sizing: border-box;
+    color: #000000;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+   
+    max-width: 300px;
+    margin-bottom: 40px;
+    left: 800px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.postTitle {
+    font-size: 30px;
+    margin: 5PX;
+}
+.postDesc {
+    font-size: 20px;
+    margin-bottom: 100PX;
+}
+.auth {
+    font-size: 16px;
+    margin: 20PX;
+}
+.post {
+    margin: 0px 200px;
+}

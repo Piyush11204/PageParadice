@@ -3,7 +3,6 @@ import "./Footer.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faYoutube,
     faGithub,
     faFacebook,
     faInstagram,
@@ -28,21 +27,21 @@ const Footer = () => {
                 </div>
                 <a
                     href="https://github.com/Piyush11204"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className="item3"
                 >
                     <FontAwesomeIcon icon={faGithub} />
                 </a>
                 <a
                     href="https://www.instagram.com/piyush.afk/"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className="item4"
                 >
                     <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a
                     href="https://www.facebook.com/profile.php?id=100025479591948"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className="item5"
                 >
                     <FontAwesomeIcon icon={faFacebook} />

@@ -1,5 +1,4 @@
 require('dotenv').config(); // Ensure this is at the top
-const express = require('express');
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
@@ -7,9 +6,6 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID_KEY;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET_KEY;
 
-// Verify environment variables are loaded
-console.log('Google Client ID:', GOOGLE_CLIENT_ID);
-console.log('Google Client Secret:', GOOGLE_CLIENT_SECRET);
 
 passport.use(
   new GoogleStrategy(

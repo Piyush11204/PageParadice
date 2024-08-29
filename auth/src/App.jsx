@@ -1,13 +1,13 @@
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar.jsx";
 import "./App.css";
 import Home from "./pages/Home";
-import Book from "./pages/Book";
-import Login from "./pages/Login";
+import Book from "./pages/Books/Book.jsx";
+import Login from "./pages/Login/Login.jsx";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import AboutPage from "./pages/AboutPage";
-import Footer from "./components/Footer";
+import AboutPage from "./pages/AboutPage/AboutPage.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 
 

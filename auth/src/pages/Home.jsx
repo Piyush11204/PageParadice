@@ -1,6 +1,6 @@
 import React from 'react'
-import { posts } from './data'
-import Card from "../components/card"
+import { posts } from './Books/data.js'
+import Card from "../components/Cards/card.jsx"
 
 
 const Home = () => {

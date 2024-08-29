@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './AboutPage.css';
-import Video from '../img/1.mp4';
+import Video from '../../img/1.mp4';
 
 const AboutPage = () => {
   const [connectValues, setConnectValues] = useState({

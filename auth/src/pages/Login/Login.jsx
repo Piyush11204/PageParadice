@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Google from '../img/google.png'
-import Facebook from '../img/facebook.png'
-import Github from '../img/github.png'
+import Google from '../../img/google.png'
+import Facebook from '../../img/facebook.png'
+import Github from '../../img/github.png'
 import axios from "axios";
 import "./Login.css";
 

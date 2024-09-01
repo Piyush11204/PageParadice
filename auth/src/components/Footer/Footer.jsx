@@ -47,8 +47,6 @@ const Footer = () => {
                 >
                     <FontAwesomeIcon icon={faFacebook} />
                 </a>
-
-                
             </div>
         </footer>
     );

@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer.jsx";
 
 
 
+
 const App = () => {
   
   const [user, setUser] = useState(null);
@@ -57,12 +58,13 @@ const App = () => {
           <Route
             path="/Book/:id"
             element={user ? <Book /> : <Navigate to="/login" />}
-            
           />
         </Routes>
         <Footer />
       </div>
+      
     </BrowserRouter>
+    
   );
 };
 

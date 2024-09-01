@@ -1,61 +1,65 @@
-import React, { useState } from 'react'
-import Google from '../../img/google.png'
-import Facebook from '../../img/facebook.png'
-import Github from '../../img/github.png'
-import axios from "axios";
-import "./Login.css";
-
+import React, { useState } from 'react';
+import Google from '../../img/google.png';
+import FacebookImg from '../../img/facebook.png';
+import Github from '../../img/github.png';
+import axios from 'axios';
+import './Login.css';
 
 const Login = () => {
     const google = () => {
-        window.open("http://localhost:5000/auth/google", "_self")
+        window.open('http://localhost:5000/auth/google', '_self');
+    };
+
+    const facebook = () => {
+        window.open('http://localhost:5000/auth/facebook', '_self');
+    };
+
+    const github = () => {
+        window.open('http://localhost:5000/auth/github', '_self');
     };
 
     const [formValues, setFormValues] = useState({
-        name: "",
-        email: "",
-        password: "",
-      });
-      const [loading, setLoading] = useState(false);
-    
-      const handleChange = ({ target: { name, value } }) => {
+        name: '',
+        email: '',
+        password: '',
+    });
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = ({ target: { name, value } }) => {
         setFormValues((prevValues) => ({
-          ...prevValues,
-          [name]: value,
+            ...prevValues,
+            [name]: value,
         }));
-      };
-    
-      const handleSubmit = async (e) => {
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-    
-        //Basic validation
+
+        // Basic validation
         if (!formValues.name || !formValues.email || !formValues.password) {
-          alert("All fields are required");
-          setLoading(false);
-          return;
+            alert('All fields are required');
+            setLoading(false);
+            return;
         }
-    
+
         try {
-          const response = await axios.post("http://localhost:5000/register", formValues);
-          console.log(response.data);
+            const response = await axios.post('http://localhost:5000/register', formValues);
+            console.log(response.data);
 
-    
-          setFormValues({
-            name: "",
-            email: "",
-            password: "",
-          });
+            setFormValues({
+                name: '',
+                email: '',
+                password: '',
+            });
+            alert('Account created successfully');
         } catch (error) {
-          console.error("Error registering account", error);
-          alert("Failed to create account");
+            console.error('Error registering account', error);
+            alert('Failed to create account');
         } finally {
-          setLoading(false);
+            setLoading(false);
         }
-      };
-
-
-
+    };
 
     return (
         <div className="login">
@@ -63,15 +67,15 @@ const Login = () => {
             <div className="wrapper">
                 <div className="left">
                     <div className="loginButton google" onClick={google}>
-                        <img src={Google} alt="" className="icon" />
+                        <img src={Google} alt="Google Icon" className="icon" />
                         Google
                     </div>
-                    <div className="loginButton facebook">
-                        <img src={Facebook} alt="" className="icon" />
+                    <div className="loginButton facebook" onClick={facebook}>
+                        <img src={FacebookImg} alt="Facebook Icon" className="icon" />
                         Facebook
                     </div>
-                    <div className="loginButton Github">
-                        <img src={Github} alt="" className="icon" />
+                    <div className="loginButton github" onClick={github}>
+                        <img src={Github} alt="Github Icon" className="icon" />
                         Github
                     </div>
                 </div>
@@ -81,15 +85,35 @@ const Login = () => {
                 </div>
                 <div className="right">
                     <form onSubmit={handleSubmit}>
-                        <input type="text" onChange={handleChange} name='name' value={formValues.name} placeholder='Username' />
-                        <input type="email" onChange={handleChange} name='email' value={formValues.email} placeholder='Email' />
-                        <input type="password" onChange={handleChange} name='password' value={formValues.password} placeholder='Password' />
-                        <button className="submit" disabled={loading}>{loading ? "Creating Account..." : "Create Account"}</button>
+                        <input
+                            type="text"
+                            onChange={handleChange}
+                            name="name"
+                            value={formValues.name}
+                            placeholder="Username"
+                        />
+                        <input
+                            type="email"
+                            onChange={handleChange}
+                            name="email"
+                            value={formValues.email}
+                            placeholder="Email"
+                        />
+                        <input
+                            type="password"
+                            onChange={handleChange}
+                            name="password"
+                            value={formValues.password}
+                            placeholder="Password"
+                        />
+                        <button className="submit" disabled={loading}>
+                            {loading ? 'Creating Account...' : 'Create Account'}
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Login
+export default Login;

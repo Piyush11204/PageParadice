@@ -34,7 +34,8 @@ const Footer = () => {
                 </a>
                 <a
                     href="https://www.instagram.com/piyush.afk/"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
+                     rel="noreferrer"
                     className="item4"
                 >
                     <FontAwesomeIcon icon={faInstagram} />

@@ -13,6 +13,7 @@ const card = ({ post }) => {
           
         
           <h3 className="title"> {post.title} </h3>
+
           <img src={post.img} alt="" className="img" />
           <p className='author'>author: {post.author}</p>
           <Link className='link' to={`/Book/${post.id}`}>

@@ -12,6 +12,7 @@ const registerUser = async (req, res) => {
       email: req.body.email,
       password: hashedPassword,
     });
+    
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
   } catch (error) {

@@ -14,6 +14,7 @@ const Book = () => {
     <div className="void">1</div>
     <div className="void">1</div>
     <div className="void">1</div>
+
     <div className="void">1</div>
     
     <img  src={post.img} alt="" className="postimg" />
